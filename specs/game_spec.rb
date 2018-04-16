@@ -6,27 +6,27 @@ require_relative("../models/game.rb")
 class GameTest < MiniTest::Test
 
   def test_game__p1_rock_wins_over_scissors()
-    assert_equal("Rock wins!", Game.play("rock", "scissors"))
+    assert_equal("Rock over Scissors, Player 1 wins!", Game.play("rock", "scissors"))
   end
 
   def test_game__p1_rock_loses_over_paper()
-    assert_equal("Paper wins!", Game.play("rock", "paper"))
+    assert_equal("Paper over Rock, Player 2 wins!", Game.play("rock", "paper"))
   end
 
   def test_game__p1_scissors_win_over_paper()
-    assert_equal("Scissors win!", Game.play("scissors", "paper"))
+    assert_equal("Scissors over Paper, Player 1 wins!", Game.play("scissors", "paper"))
   end
 
   def test_game__p1_scissors_loses_over_rock()
-    assert_equal("Rock wins!", Game.play("scissors", "rock"))
+    assert_equal("Rock over Scissors, Player 2 wins!", Game.play("scissors", "rock"))
   end
 
   def test_game__p1_paper_wins_over_rock()
-    assert_equal("Paper wins!", Game.play("paper", "rock"))
+    assert_equal("Paper over Rock, Player 1 wins!", Game.play("paper", "rock"))
   end
 
   def test_game__p1_paper_loses_over_scissors()
-    assert_equal("Scissors win!", Game.play("paper", "scissors"))
+    assert_equal("Scissors over Paper, player 2 wins!", Game.play("paper", "scissors"))
   end
 
   def test_game__draw()
