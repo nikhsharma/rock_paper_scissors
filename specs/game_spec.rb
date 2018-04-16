@@ -13,6 +13,14 @@ class GameTest < MiniTest::Test
     assert_equal("Paper wins!", Game.play("rock", "paper"))
   end
 
+  def test_game__p1_scissors_win_over_paper()
+    assert_equal("Scissors win!", Game.play("scissors", "paper"))
+  end
+
+  def test_game__p1_scissors_loses_over_rock()
+    assert_equal("Rock wins!", Game.play("scissors", "rock"))
+  end
+
   def test_game__draw()
     assert_equal("It's a Draw!", Game.play("rock", "rock"))
   end
